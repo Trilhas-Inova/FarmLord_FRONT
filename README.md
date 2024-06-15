@@ -20,6 +20,6 @@ O objetivo deste aplicativo é a criação de uma landing page para um jogo cham
    npm install
 
 ## Tecnologias Utilizadas
-- [**Javascript**](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript): É uma linguagem de programação leve , mais conhecida como a linguagem de script para páginas web
-- [**Css**](https://developer.mozilla.org/pt-BR/docs/Web/CSS): É uma linguagem de estilo  para os documentos HTML, permitindo estilizar e organizar elementos visuais em uma página da web.
-- [**Html**](https://developer.mozilla.org/pt-BR/docs/Web/HTML):  Define o significado e a estrutura do conteúdo da web
+- [**Javascript**](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) : É uma linguagem de script leve para páginas web.
+- [**Css**](https://developer.mozilla.org/pt-BR/docs/Web/CSS) : É uma linguagem de estilo que organiza elementos visuais em páginas HTML.
+- [**Html**](https://developer.mozilla.org/pt-BR/docs/Web/HTML) :  Define o significado e a estrutura do conteúdo da web
