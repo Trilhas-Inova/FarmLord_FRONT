@@ -1,3 +1,4 @@
+
 # FarmLord
 Este projeto é o frontend de uma aplicação destinada ao Trilha Desafio 4 do curso  [Trilha Inova Maranhão](https://www.inova.ma.gov.br/o).
 <br/>
@@ -23,3 +24,4 @@ O objetivo deste aplicativo é a criação de uma landing page para um jogo cham
 - [**Javascript**](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) : É uma linguagem de script leve para páginas web.
 - [**Css**](https://developer.mozilla.org/pt-BR/docs/Web/CSS) : É uma linguagem de estilo que organiza elementos visuais em páginas HTML.
 - [**Html**](https://developer.mozilla.org/pt-BR/docs/Web/HTML) :  Define o significado e a estrutura do conteúdo da web
+
