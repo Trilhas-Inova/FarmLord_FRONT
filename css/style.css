@@ -341,7 +341,9 @@ as demais não */
 .grama3_img_operation {
   position: absolute;
   right: 0;
- top: 790px;
+ /* top: 790px; */
+ bottom: -50%;
+ transform: translateY(-50%);
  z-index: -1;
 }
 .star_img_operation {
@@ -360,6 +362,36 @@ as demais não */
   width: 70%;
 margin-bottom: 4px;
 }
+.chars_info{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 53px;
+  
+}
+.chars_btns{
+ 
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  right: 15%;
+  transform: translate(-50%,-50%);
+}
+.chars_btns button{
+  width: 37px;
+  height: 37px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.chars_btns button:hover{
+  opacity: .8;
+  box-shadow: 1px 0 10px #00000092;
+}
+
 .grama4_img {
   position: absolute;
   left: 0; 
@@ -376,7 +408,7 @@ margin-bottom: 4px;
   background-color: #ffffff; 
   color: #000000; 
   padding: 15px; 
-  width: 2%;
+  width: 1%;
   border-radius: 500px; 
   text-decoration: none; 
   font-size: 20px;
@@ -386,7 +418,7 @@ margin-bottom: 4px;
   font-size: 15px;
 }
 .scrollbutton:hover { 
- width: 3.5%;
+ width: 1.5%;
  transition: 0.2s ease-out;
 }
 .up_arrow {
