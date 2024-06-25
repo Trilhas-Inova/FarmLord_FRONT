@@ -1,4 +1,4 @@
-// script para o botão de voltar ao topo
+//==script para o botão de voltar ao topo
 const backToTopButton = document.getElementById('scrollbuttonid');
 
 window.addEventListener("scroll", scrollFunction);
@@ -21,3 +21,5 @@ function scrollFunction() {
     }
   }
 }
+
+

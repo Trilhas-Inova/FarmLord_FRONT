@@ -1,157 +1,289 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FarmLord</title>
-   <!-- FONT GOOGLE -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap" rel="stylesheet">
-   
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header class="cabecalho">
-    <h1 class="cabecalho_text">FARMLORD</h1>
-    <nav class="navbar">
-      <a class="navbar_text" href="#about">Sobre o jogo</a>
-      <a class="navbar_text" href="#operation">Como funciona</a>
-      <a class="navbar_text" href="#">Jogar</a>
-    </nav>
-    <a class="cabecalho_btn" href="#cadastro"> Cadastre-se </a>
-  </header>
-  <main>
-    <div class="onda" >
-  <img class="onda_img_cabecalho" src="img/background/Element.png" alt="">
-</div>
-<section class="hero" >
-<h1 class="title_hero" >Bem-vindo ao FarmLord</h1>
-<p class="desc_hero" >Assuma o controle da fazenda e transforme-a em um próspero <br> 
-  empreendimento orgânico. Desafie-se a superar obstáculos e <br> 
-  levar seus produtos aos consumidores!</p>
-  <a class="cabecalho_btn" href=""> JOGUE AGORA </a>
-<img class="grama1_img_hero" src="img/icon/grama1.svg" alt="">
-<img class="grama2_img_hero" src="img/icon/grama2.svg" alt="">
-</section>
-<section id="about" class="about">
-  <h1 class="title_about" >Sobre o jogo</h1>
-  <p class="desc_about" >
-    FarmLord é um jogo interativo e casual de cartas, onde você assume o papel de único herdeiro <br> 
-    de uma fazenda orgânica. Enfrente desafios econômicos, estruturais e logísticos para <br> 
-    garantir que seus produtos cheguem ao consumidor final. Com uma narrativa envolvente e <br> 
-    estilizada, FarmLord oferece uma experiência única para jogadores de todas as idades.
-  </p>
-</section>
-<section  id="operation" class="operation" >
-  <h1 class="title_operation" >Como funciona</h1>
-  <img class="grama3_img_operation" src="img/icon/grama3.svg" alt="">
-  <div class="textbox_container" >
-  <div class="textbox_operation">
-    <img class="star_img_operation" src="img/icon/star.png" alt="">
-    <img  src="img/icon/textbox.svg" alt="">
-    <p class="text" >Comece sua jornada herdando a <br> fazenda do tio Paulo. 
-      Aprenda sobre a <br> história da propriedade e seus desafios.</p>
-      <div class="separator" >
-        <p class="subtext" >Objetivo: Familiarize-se com a fazenda e prepare- <br> 
-          se para a primeira colheita</p>
-      </div>
-  </div>
-  <div class="textbox_operation">
-    <img class="star_img_operation" src="img/icon/star.png" alt="">
-    <img src="img/icon/textbox.svg" alt="">
-    <p class="text" > Use as cartas para decidir quais <br> 
-      cultivos plantar e como gerenciar a  <br> produção.</p>
-      <div class="separator" >
-        <p class="subtext" > Objetivo: Maximizar a produtividade da fazenda <br> 
-          enquanto lida com pragas e condições climáticas <br> adversas. </p>
-      </div>
-  </div>
-  <div class="textbox_operation">
-    <img class="star_img_operation" src="img/icon/star.png" alt="">
-    <img  src="img/icon/textbox.svg" alt="">
-    <p class="text" > Coordene o transporte dos produtos <br> 
-      com a ajuda de Ana Pereira, a gerente <br> 
-      de logística. </p>
-      <div class="separator" >
-        <p class="subtext" > Objetivo: Otimize as rotas e veículos para garantir <br> 
-          que os produtos cheguem frescos aos mercados e <br> 
-          feiras. </p>
-      </div>
-  </div>
-</div>
-</section>
-<section  id="chars" class="chars" >
-  <div class="chars_info">
-    <h1 class="title_chars" >Personagens</h1>
-    <div class="chars_btns">
-      <button id="btn-left">
-        <img src="img/icon/arrow-left.png" alt="seta esquerda ">
-      </button>
-      <button id="btn-rigth">
-        <img src="img/icon/arrow-right.png" alt="seta direita">
-      </button>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  </div>
-  <div class="charbox_container" >
-    <div class="charbox_chars" >
-  <img src="img/personagem/charbox.svg" alt="">
-  <p class="text_chars" >Tião Neto <br> <span class="subtext_chars" >CASEIRO</span>  </p>
-  <img class="char" src="img/personagem/personagem.png" alt="">
-</div>
-<div class="charbox_chars" >
-  <img src="img/personagem/charbox.svg" alt="">
-  <p class="text_chars" >Ana Pereira <br> <span class="subtext_chars" >GERENTE DE LOGÍSTICA</span>  </p>
-  <img class="char" src="img/personagem/personagem.png" alt="">
-</div>
-<div class="charbox_chars" >
-  <img src="img/personagem/charbox.svg" alt="">
-  <p class="text_chars" >Laura Souza <br> <span class="subtext_chars" >FEIRANTE</span>  </p>
-  <img class="char" src="img/personagem/personagem.png" alt="">
-</div>
-  </div>
-</section>
-<section  id="cadastro" class="cadastro" > 
-  <img class="grama4_img" src="img/icon/grama4.svg" alt="">
-<img src="img/background/cadastro_bg.svg" alt="">
-<h1 class="desc_cadastro" >Experimente o FarmLord e transforme a fazenda do seu tio <br> 
-  em um próspero empreendimento orgânico. Enfrente <br> 
-  desafios emocionantes e leve seus produtos ao mercado!  </h1>
-  <form class="form_cadastro" >
-    <label class="label_cadastro" for="nome">Nome</label>
-    <input class="input_cadastro" type="text" id="nome" name="nome" placeholder="Digite seu nome">
-    <label class="label_cadastro" for="email">E-mail</label>
-    <input class="input_cadastro" type="email" id="email" name="email" placeholder="Digite seu e-mail">
-    <label class="label_cadastro" for="senha">Senha</label>
-    <input class="input_cadastro" type="password" id="senha" name="senha" placeholder="Digite a sua senha">
-    <input class="submit_cadastro" type="submit" value="CADASTRAR">
-  </form>
-</section>
-  </main>
-  <footer class="rodape" >
-    <div class="rodape_container">
-      <div class="links_rodape" >
-        <h1 class="title_rodape" >Links úteis</h1>
-        <a class="links_text_rodape" href="#about">Sobre o jogo </a>
-        <a class="links_text_rodape" href="#operation">Como funciona</a>
-        <a class="links_text_rodape" href="#chars">Personagens </a>
+    <title>FarmLord</title>
+    
+    
+
+    <!-- FONT GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+     <!-- fazer a tela de carregamento-->
+     
+
+     
+    <header class="cabecalho">
+      <h1 class="cabecalho_text">FARMLORD</h1>
+      <nav class="navbar">
+        <a class="navbar_text" href="#about">Sobre o jogo</a>
+        <a class="navbar_text" href="#operation">Como funciona</a>
+        <a class="navbar_text" href="#">Jogar</a>
+      </nav>
+      <a class="cabecalho_btn" href="#cadastro"> Cadastre-se </a>
+    </header>
+    <main>
+      <div class="onda">
+        <img
+          class="onda_img_cabecalho"
+          src="img/background/Element.png"
+          alt=""
+        />
       </div>
-      <div class="links_rodape" >
-        <h1 class="title_rodape" >Contato</h1>
-        <p class="links_text_rodape" >contato@farmlord.com</p>
+      <section class="hero">
+        <h1 class="title_hero">Bem-vindo ao FarmLord</h1>
+        <p class="desc_hero">
+          Assuma o controle da fazenda e transforme-a em um próspero <br />
+          empreendimento orgânico. Desafie-se a superar obstáculos e <br />
+          levar seus produtos aos consumidores!
+        </p>
+        <a class="cabecalho_btn" href=""> JOGUE AGORA </a>
+        <img class="grama1_img_hero" src="img/icon/grama1.svg" alt="" />
+        <img class="grama2_img_hero" src="img/icon/grama2.svg" alt="" />
+      </section>
+      <section id="about" class="about">
+        <h1 class="title_about">Sobre o jogo</h1>
+        <p class="desc_about">
+          FarmLord é um jogo interativo e casual de cartas, onde você assume o
+          papel de único herdeiro <br />
+          de uma fazenda orgânica. Enfrente desafios econômicos, estruturais e
+          logísticos para <br />
+          garantir que seus produtos cheguem ao consumidor final. Com uma
+          narrativa envolvente e <br />
+          estilizada, FarmLord oferece uma experiência única para jogadores de
+          todas as idades.
+        </p>
+      </section>
+      <section id="operation" class="operation">
+        <h1 class="title_operation">Como funciona</h1>
+        <img class="grama3_img_operation" src="img/icon/grama3.svg" alt="" />
+        <div class="textbox_container">
+          <div class="textbox_operation">
+            <img class="star_img_operation" src="img/icon/star.png" alt="" />
+            <img src="img/icon/textbox.svg" alt="" />
+            <p class="text">
+              Comece sua jornada herdando a <br />
+              fazenda do tio Paulo. Aprenda sobre a <br />
+              história da propriedade e seus desafios.
+            </p>
+            <div class="separator">
+              <p class="subtext">
+                Objetivo: Familiarize-se com a fazenda e prepare- <br />
+                se para a primeira colheita
+              </p>
+            </div>
+          </div>
+          <div class="textbox_operation">
+            <img class="star_img_operation" src="img/icon/star.png" alt="" />
+            <img src="img/icon/textbox.svg" alt="" />
+            <p class="text">
+              Use as cartas para decidir quais <br />
+              cultivos plantar e como gerenciar a <br />
+              produção.
+            </p>
+            <div class="separator">
+              <p class="subtext">
+                Objetivo: Maximizar a produtividade da fazenda <br />
+                enquanto lida com pragas e condições climáticas <br />
+                adversas.
+              </p>
+            </div>
+          </div>
+          <div class="textbox_operation">
+            <img class="star_img_operation" src="img/icon/star.png" alt="" />
+            <img src="img/icon/textbox.svg" alt="" />
+            <p class="text">
+              Coordene o transporte dos produtos <br />
+              com a ajuda de Ana Pereira, a gerente <br />
+              de logística.
+            </p>
+            <div class="separator">
+              <p class="subtext">
+                Objetivo: Otimize as rotas e veículos para garantir <br />
+                que os produtos cheguem frescos aos mercados e <br />
+                feiras.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="chars" class="chars">
+        <div class="chars_info">
+          <h1 class="title_chars">Personagens</h1>
+          <div class="chars_btns">
+            <button id="btn-left">
+              <img src="img/icon/arrow-left.png" alt="seta esquerda " />
+            </button>
+            <button id="btn-rigth">
+              <img src="img/icon/arrow-right.png" alt="seta direita" />
+            </button>
+          </div>
+        </div>
+        <div class="charbox_container">
+          <div class="charbox_chars">
+            <img src="img/personagem/charbox.svg" alt="" />
+            <p class="text_chars">
+              Tião Neto <br />
+              <span class="subtext_chars">CASEIRO</span>
+            </p>
+            <img class="char" src="img/personagem/personagem.png" alt="" />
+          </div>
+          <div class="charbox_chars">
+            <img src="img/personagem/charbox.svg" alt="" />
+            <p class="text_chars">
+              Ana Pereira <br />
+              <span class="subtext_chars">GERENTE DE LOGÍSTICA</span>
+            </p>
+            <img class="char" src="img/personagem/personagem.png" alt="" />
+          </div>
+          <div class="charbox_chars">
+            <img src="img/personagem/charbox.svg" alt="" />
+            <p class="text_chars">
+              Laura Souza <br />
+              <span class="subtext_chars">FEIRANTE</span>
+            </p>
+            <img class="char" src="img/personagem/personagem.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="cadastro" class="cadastro">
+        
+        <img class="grama4_img" src="img/icon/grama4.svg" alt="" />
+        <!-- <img src="img/background/cadastro_bg.svg" alt="" /> -->
+        <div class="cadastro_info">
+
+          <h1 class="desc_cadastro">
+            Experimente o FarmLord e transforme a fazenda do seu tio <br />
+            em um próspero empreendimento orgânico. Enfrente <br />
+            desafios emocionantes e leve seus produtos ao mercado!
+          </h1>
+          <form class="form_cadastro " id="form">
+            <div class="form_campo ">
+                <label class="label_cadastro" for="nome">Nome</label>
+            <input
+              class="input_cadastro "
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              minlength="3"
+              oninput="nameValidate()"
+              required
+             
+  
+            />
+            <!-- <div class="form-icon">
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+              
+            </div> -->
+            
+               <small class="form-span">Este campo é obrigatório.</small>
+              <!-- <span class="form-span">Nome deve ter no mínimo 3 caracteres</span> -->
+  
+           
+            </div>
+
+            <div class="form_campo ">
+              <label class="label_cadastro" for="email">E-mail</label>
+              <input
+                class="input_cadastro "
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                minlength="4"
+                oninput="emailValidate()"
+                required
+              />
+              <small class="form-span">Endereço de email inválido. Por favor, insira um email válido.</small>
+              <!-- <span class="form-span">Digite um email válido</span> -->
+  
+            </div>
+            <div class="form_campo">
+              
+              <label class="label_cadastro" for="date" >Data de Nascimento</label>
+              <input
+                class="input_cadastro"
+                type="date"
+                id="date"
+                name="date"
+                required
+               oninput="validateDate()"
+                
+              />
+              <small class="form-span">Formato de data inválido. Use o formato DD/MM/AAAA.</small>
+              
+            </div>
+            
+            <div class="form_campo">
+              
+              <label class="label_cadastro" for="senha" >Senha</label>
+              <input
+                class="input_cadastro"
+                type="password"
+                id="senha"
+                name="senha"
+                placeholder="Digite a sua senha"
+                minlength="6"
+                oninput="mainPasswordValidate()"
+                required
+                
+              />
+              <small class="form-span">A senha deve ter pelo menos 6 caracteres.</small>
+              <!-- <span class="form-span">Digite uma senha com no mínimo 8 caracteres</span> -->
+            </div>
+            
+  
+            <input class="submit_cadastro" type="submit" value="CADASTRAR" />
+          </form>
+        </div>
+      
+       
+      </section>
+    </main>
+    <footer class="rodape">
+      <div class="rodape_container">
+        <div class="links_rodape">
+          <h1 class="title_rodape">Links úteis</h1>
+          <a class="links_text_rodape" href="#about">Sobre o jogo </a>
+          <a class="links_text_rodape" href="#operation">Como funciona</a>
+          <a class="links_text_rodape" href="#chars">Personagens </a>
+        </div>
+        <div class="links_rodape">
+          <h1 class="title_rodape">Contato</h1>
+          <p class="links_text_rodape">contato@farmlord.com</p>
+        </div>
+        <div class="links_rodape">
+          <h1 class="title_rodape">Redes sociais</h1>
+          <img src="img/icon/social_icons.svg" alt="" />
+        </div>
       </div>
-      <div class="links_rodape" >
-        <h1 class="title_rodape" >Redes sociais</h1>
-        <img src="img/icon/social_icons.svg" alt="">
-      </div>
-    </div>
-    <p class="copyright_rodape" >Copyright © 2024 FarmLord. Todos os direitos reservados</p>
-  </footer>  
-  <a href="#" class="scrollbutton" id="scrollbuttonid"> 
-    <img class="up_arrow" src="img/icon/arrow-up.png" alt="">
-  </a> 
-  <script src="js/script.js"></script>
-</body>
+      <p class="copyright_rodape">
+        Copyright © 2024 FarmLord. Todos os direitos reservados
+      </p>
+    </footer>
+    <a href="#" class="scrollbutton" id="scrollbuttonid">
+      <img class="up_arrow" src="img/icon/arrow-up.png" alt="" />
+    </a>
+  
+    <!-- biblioteca de icons -->
+    <script
+      src="https://kit.fontawesome.com/f9e19193d6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <script src="js/validate_api.js"></script>
+  </body>
 </html>
-
