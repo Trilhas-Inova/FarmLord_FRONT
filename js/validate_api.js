@@ -18,9 +18,9 @@ form.addEventListener("submit",async (event)=>{
   
   //== Dados do formulário
   const dados ={
-    nome:name,
+    username:name,
     email:email,
-    birthData: birthData,
+    birthday: birthData,
     password:password
   };
 
@@ -53,7 +53,9 @@ form.addEventListener("submit",async (event)=>{
   //http://api.farmlord.com.br/register
   //https://reqres.in/api/users
 
-  try {
+
+  console.log(dados);
+try {
    
    const result = await fetch('https://api.farmlord.com.br/register', {
     method: 'POST',
@@ -61,7 +63,6 @@ form.addEventListener("submit",async (event)=>{
         'Content-Type': 'application/json'
     },
     body: JSON.stringify(dados)
-   
 
 });
 //
