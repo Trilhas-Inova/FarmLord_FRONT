@@ -6,6 +6,7 @@
   --color-white:#FFFFFF;
   --color-bnt:#1E3F3F;
   --color-card:#47934A;
+  --color-erro:#f60404;
   --color-placeholder: #000000;
   --font-farro:"Farro", sans-serif;
 }
@@ -58,7 +59,14 @@ body {
   background-color: var(--color-bnt);
   border-radius: 50px;
   white-space: nowrap;
+  position: relative;
+  transition: all .3s ease-in-out;
 }
+
+.cabecalho_btn:hover{
+ background-color: var(--color-card);
+}
+
 
 /* -----código abaixo com os parâmetros do hero/introdução----- */
 .onda {
@@ -209,15 +217,30 @@ top: -380px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 6px;
+  
 }
 
 /* -----código abaixo com os parâmetros do cadastro/formulário----- */
 .cadastro {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-bottom: 152px;
+
+}
+.cadastro_info{
+  width: 940px;
+  max-width: 100%;
+  height:110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 32px;
+  background: var(--color-secondary);
 }
 .desc_cadastro {
 position: absolute;
@@ -227,21 +250,49 @@ font-size: 24px;
 font-weight: 400;
 color: var(--color-white);
 margin-top: 5px;
-top: 12%;
+top: 6%;
 left: 50%;
 transform: translate(-50%, -50%);
 white-space: nowrap;
+
 }
 .form_cadastro {
+  height: 80%;
   font-family: var(--font-farro);
   color: var(--color-white);
-font-size: 18px;
-margin-top: 40px;
+  font-size: 18px;
+   margin-top: 40px;
   position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
  display: flex;
  flex-direction: column;
- gap: 33px;
+ gap: 12px;
 }
+.form_campo{
+  height: 30%;
+  display: grid;
+  gap: 10px;
+  margin:  0 auto;
+  position: relative;
+  
+}
+.form_campo label{
+  margin: 15px 0;
+}
+
+/* Aviso de erro do formulário */
+.form_campo .form-span{
+  font-size: 12px;
+  color: #f60404;
+  background-color: #ead5d4;
+  padding: 7px;
+  visibility: hidden;
+  border-radius: 5px;
+  margin-top: -10px;
+
+}
+
 .input_cadastro {
   font-family: var(--font-farro);
   color: var(--color-placeholder);
@@ -250,9 +301,14 @@ margin-top: 40px;
   padding: 18px 20px;
   margin: 8px 0;
   margin-top: -22px;
+  outline: none;
   box-sizing: border-box;
   border-radius: 7px;
   border-color: var(--color-yellow);
+  
+}
+input[type="date"] {
+  color: #7f7f7f;
 }
 .submit_cadastro {
   font-family: var(--font-farro);
@@ -261,6 +317,13 @@ margin-top: 40px;
   background-color: var(--color-bnt);
   padding: 18px 20px;
   border: none;
+  transition: all .4s ease;
+  border-radius: 5px;
+  
+
+}
+.submit_cadastro:hover{
+  opacity: .8;
 }
 input::placeholder {
   font-family: var(--font-farro);
@@ -268,6 +331,7 @@ input::placeholder {
   font-size: 16px;
   opacity: 0.5;
 }
+
 
 /* -----código abaixo com os parâmetros do rodapé----- */
 .rodape {
@@ -302,8 +366,9 @@ input::placeholder {
 .copyright_rodape {
   font-size: 14px;
   font-weight: 500;
-text-align: center; 
-padding: 20px; 
+ text-align: center; 
+  padding: 20px; 
+
 }
 
 /* -----código abaixo regula o scrolls das anchors tags----- */
@@ -339,6 +404,7 @@ as demais não */
  z-index: -1;
 }
 .grama3_img_operation {
+  
   position: absolute;
   right: 0;
  /* top: 790px; */
@@ -386,16 +452,22 @@ margin-bottom: 4px;
   border: none;
   cursor: pointer;
   transition: all .3s ease;
+  box-shadow: 2px 2px 0px #626262;
+  
 }
 .chars_btns button:hover{
-  opacity: .8;
-  box-shadow: 1px 0 10px #00000092;
+  
+  box-shadow: inset 2px 2px 0px #626262;
+
+
 }
 
 .grama4_img {
+  width: 320px;
   position: absolute;
-  left: 0; 
+  left: 7%; 
   bottom: 0;
+  transform: translateX(-50%);
 }
 
 /* código abaixo com os parâmetros do botão de voltar para o topo */
@@ -486,4 +558,5 @@ margin-bottom: 4px;
     transform: translate3d(0, 100%, 0);
   }
 }
+
 
