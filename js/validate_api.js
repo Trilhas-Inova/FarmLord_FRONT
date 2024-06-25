@@ -55,7 +55,7 @@ form.addEventListener("submit",async (event)=>{
 
   try {
    
-   const result = await fetch('http://api.farmlord.com.br/register', {
+   const result = await fetch('https://api.farmlord.com.br/register', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
