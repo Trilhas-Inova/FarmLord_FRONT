@@ -44,10 +44,6 @@ form.addEventListener("submit",async (event)=>{
     return;
 }
 
-
-
-
-
   //===Envia os dados para a API
   
   //http://api.farmlord.com.br/register
