@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>FarmLord</title>
+
+    <meta name="keywords" content="
+    jogo, gamer, cartas, história interativa, casual, simulação agrícola, gerenciamento de fazenda, desafios agrícolas, administração de fazenda, agricultura virtual
+    ">
+     <meta name="title" content="FarmLord - Jogo de Simulação Agrícola">
+    <meta name="description" content="
+    Assuma o controle da fazenda do tio Paulo e supere desafios estruturais, logísticos e econômicos para levar seus produtos ao consumidor neste envolvente jogo de simulação agrícola. Descubra o mundo da agricultura virtual agora!
+    ">
     
     
 
@@ -15,23 +22,23 @@
       href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-
+    <!-- links de css e favicon  -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/icon/favicon-test.jpeg" type="image/x-icon">
   </head>
 
   <body>
-     <!-- fazer a tela de carregamento-->
-     
-
-     
-    <header class="cabecalho">
+    
+   <header class="cabecalho">
       <h1 class="cabecalho_text">FARMLORD</h1>
       <nav class="navbar">
+        
         <a class="navbar_text" href="#about">Sobre o jogo</a>
         <a class="navbar_text" href="#operation">Como funciona</a>
-        <a class="navbar_text" href="#">Jogar</a>
+        <a class="navbar_text" href="https://weslemarques.itch.io/farmlord" target="_blank">Jogar</a>
       </nav>
       <a class="cabecalho_btn" href="#cadastro"> Cadastre-se </a>
+      
     </header>
     <main>
       <div class="onda">
@@ -48,7 +55,7 @@
           empreendimento orgânico. Desafie-se a superar obstáculos e <br />
           levar seus produtos aos consumidores!
         </p>
-        <a class="cabecalho_btn" href=""> JOGUE AGORA </a>
+        <a class="cabecalho_btn" href="https://weslemarques.itch.io/farmlord" target="_blank"> JOGUE AGORA </a>
         <img class="grama1_img_hero" src="img/icon/grama1.svg" alt="" />
         <img class="grama2_img_hero" src="img/icon/grama2.svg" alt="" />
       </section>
@@ -155,6 +162,8 @@
             </p>
             <img class="char" src="img/personagem/personagem.png" alt="" />
           </div>
+          
+         
         </div>
       </section>
       <section id="cadastro" class="cadastro">
@@ -232,12 +241,12 @@
                 id="senha"
                 name="senha"
                 placeholder="Digite a sua senha"
-                minlength="6"
+                minlength="8"
                 oninput="mainPasswordValidate()"
                 required
                 
               />
-              <small class="form-span">A senha deve ter pelo menos 6 caracteres.</small>
+              <small class="form-span">A senha deve ter pelo menos 8 caracteres.</small>
               <!-- <span class="form-span">Digite uma senha com no mínimo 8 caracteres</span> -->
             </div>
             
@@ -274,11 +283,7 @@
       <img class="up_arrow" src="img/icon/arrow-up.png" alt="" />
     </a>
   
-    <!-- biblioteca de icons -->
-    <script
-      src="https://kit.fontawesome.com/f9e19193d6.js"
-      crossorigin="anonymous"
-    ></script>
+    
     <script src="js/script.js"></script>
     <script src="js/validate_api.js"></script>
   </body>
