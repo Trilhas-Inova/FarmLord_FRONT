@@ -52,14 +52,11 @@ form.addEventListener("submit",async (event)=>{
     return;
 }
 
-
-
   //===Envia os dados para a API
   
   //https://api.farmlord.com.br/register
   //https://reqres.in/api/users
   
-
 
   console.log(dados);
 try {
@@ -70,7 +67,6 @@ try {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify(dados)
- 
 });
 
 console.log(result)

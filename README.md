@@ -20,6 +20,9 @@ O objetivo deste aplicativo é a criação de uma landing page para um jogo cham
    ```sh
    npm install
 
+## Layout
+[Figma](https://www.figma.com/design/jZ7ms3ClHE4sxSgCBhMpYU/FarmLord---Trilhas?node-id=35-46&t=ZuO1nV3aJvD0rBUS-0).
+
 ## Tecnologias Utilizadas
 - [**Javascript**](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) : É uma linguagem de script leve para páginas web.
 - [**Css**](https://developer.mozilla.org/pt-BR/docs/Web/CSS) : É uma linguagem de estilo que organiza elementos visuais em páginas HTML.
