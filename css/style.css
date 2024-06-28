@@ -6,29 +6,78 @@
   --color-white:#FFFFFF;
   --color-bnt:#1E3F3F;
   --color-card:#47934A;
-  --color-erro:#f60404;
   --color-placeholder: #000000;
   --font-farro:"Farro", sans-serif;
 }
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: var(--color-primary);
+  font-family: var(--font-farro);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* -----código abaixo com os parâmetros do cabeçalho----- */
+
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 6rem;
+
+  align-items: center;
+}
+
+.nav-list ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-item {
+  margin: 0 15px;
+}
+.nav-item a{
+  transition: all .4s ease-in-out;
+}
+.nav-item a:hover{
+  font-size: 20;
+  color: var(--color-card);
+  font-weight: 700;
+}
 .cabecalho {
   font-family: var(--font-farro);
   color: var(--color-white);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;  
-  padding: 30px;
+  width: 100%;
   background-color: var(--color-yellow);
 }
 .cabecalho_text {
@@ -59,31 +108,115 @@ body {
   background-color: var(--color-bnt);
   border-radius: 50px;
   white-space: nowrap;
-  position: relative;
-  transition: all .3s ease-in-out;
+  transition:  all .4s ease-in-out;
 }
-
 .cabecalho_btn:hover{
- background-color: var(--color-card);
+  background-color:var(--color-card)
+}
+.btn{
+  width: 178px;
+  font-weight: 700;
+  display: block;
+  text-align: center;
+  border-radius: 50px;
+  padding: 16px 22px 16px 24px;
+  margin: 5px auto;
+  font-size: 1rem;
+  background-color: var(--color-bnt);
+  color: var(--color-white);
+  transition: all .4s ease-in-out;
+
+}
+.btn:hover{
+background-color: var(--color-card);
 }
 
+
+
+
+
+/* responsividade - menu mobile */
+
+.mobile-menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1000px){
+  .nav-bar {
+    padding: 1.5rem 4rem;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .cabecalho_btn{
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  
+  .mobile-menu .nav-item {
+    display: block;
+    padding-bottom: 1.2rem;
+  }
+
+  .mobile-menu .cabecalho_btn {
+    display: block;
+    padding: 1rem 2rem;
+  }
+
+  .mobile-menu .cabecalho_btn button {
+    width: 100%;
+  }
+
+  .open {
+    display: block;
+  }
+}
 
 /* -----código abaixo com os parâmetros do hero/introdução----- */
-.onda {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 80px;
-}
+
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-top: -380px;
   gap: 25px;
-  margin-bottom: -280px;
+  width: 100%;
+
+  background-image: url(../img/background/Element.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  justify-content: center;
+  margin-top: 100px;
 }
+
+.hero p{
+  width: 30%;
+}
+
 .title_hero {
   font-family: var(--font-farro);
   color: var(--color-white);
@@ -96,6 +229,36 @@ top: -380px;
   font-size: 1.375;
   font-weight: 400;
   text-align: center;
+}
+
+@media screen and (max-width: 1500px){
+  .hero p {
+    font-size: 16px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .hero{
+    width: 100%;
+    height: 60%;
+    padding-bottom: 50px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+    width: 90%;
+  }
+
+  .hero p {
+    font-size: 16px;
+    width: 90%;
+  }
+  .hero .cabecalho_btn{
+    position: absolute;
+   
+    
+  }
 }
 
 /* -----código abaixo com os parâmetros do about/sobre o jogo----- */
@@ -123,11 +286,31 @@ top: -380px;
   font-size: 1.375rem;
   font-weight: 400;
   text-align: center;
+  line-height: 35px;
+}
+
+.about p {
+  width: 50%;
+}
+
+@media screen and (max-width: 1000px){
+  .about p {
+    width: 80%;
+   
+  }
+  .desc_about{
+    
+    font-size: 1.2rem;
+    padding: 4px;
+    line-height: 32px;
+  }
 }
 
 /* -----código abaixo com os parâmetros do operation/como funciona----- */
+
 .operation {
   margin-top: 110px;
+  width: 90%;
 }
 .title_operation {
   font-family: var(--font-farro);
@@ -145,6 +328,7 @@ top: -380px;
 .textbox_operation {
   position: relative;
   text-align: center;
+  width: 100%;
 }
 .text {
   font-family: var(--font-farro);
@@ -175,7 +359,55 @@ top: -380px;
   width: 10%;
 }
 
+@media screen and (max-width: 1300px){
+  .textbox_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.textbox_card {
+  background-color: #bc9c05;
+  width: 90%;
+  height: 284px;
+  border-radius: 30px;
+  border: solid 2px #643020;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.textbox_card_text {
+  font-family: var(--font-farro);
+  font-size: 16px;
+  color: var(--color-white);
+  width: 90%;
+}
+
+.textbox_card_subtext{
+  font-family: var(--font-farro);
+  font-size: 13px;
+  color: var(--color-white);
+  width: 90%;
+}
+
+.textbox_separador {
+  background-color: #c9ac19;
+  height: 1px;
+  width: 80%;
+  border-radius: 50%;
+}
+
 /* -----código abaixo com os parâmetros do chars/personagens----- */
+.chars_web{
+  display: block;
+}
 .title_chars {
   font-family: var(--font-farro);
   color: var(--color-white);
@@ -194,137 +426,64 @@ top: -380px;
   text-align: center;
 
 }
-.text_chars {
-  font-family: var(--font-farro);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--color-white);
-  position: absolute;
-  margin-top: 5px;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
+.charbox_chars img{
+  width:384px;
+  height: 442px;
+  object-fit: cover;
 }
-.subtext_chars {
-  font-family: var(--font-farro);
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--color-white);
-  background-color: var(--color-secondary);
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 6px;
+.chars_mobile{
+  display: none;
+}
+
+@media screen and (max-width: 1300px){
+  .charbox_chars_background {
+    width: 90%;
+  }
+  .chars_web{
+    display: none;
+  }
   
-}
-
-/* -----código abaixo com os parâmetros do cadastro/formulário----- */
-.cadastro {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-bottom: 152px;
-
-}
-.cadastro_info{
-  width: 940px;
-  max-width: 100%;
-  height:110vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-  border-radius: 32px;
-  background: var(--color-secondary);
-}
-.desc_cadastro {
-position: absolute;
-text-align: center;
-font-family: var(--font-farro);
-font-size: 24px;
-font-weight: 400;
-color: var(--color-white);
-margin-top: 5px;
-top: 6%;
-left: 50%;
-transform: translate(-50%, -50%);
-white-space: nowrap;
-
-}
-.form_cadastro {
-  height: 80%;
-  font-family: var(--font-farro);
-  color: var(--color-white);
-  font-size: 18px;
-   margin-top: 40px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
- display: flex;
- flex-direction: column;
- gap: 12px;
-}
-.form_campo{
-  height: 30%;
-  display: grid;
-  gap: 10px;
-  margin:  0 auto;
-  position: relative;
+  .chars_mobile{
+    
+    display: block;
+    margin: 50px auto;
+    padding: 5px;
+    position: relative;
+  }
+  .charbox_container::-webkit-scrollbar{
+    display: none;
+  }
+  .chars_mobile .charbox_container{
+    display: flex;
+    width: 380px;
+    margin: auto  ;
+    flex-flow: row nowrap;
+    overflow-x: scroll;
+    
+  }
+  .arrow{
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 2px 2px 0px #626262;
   
-}
-.form_campo label{
-  margin: 15px 0;
-}
-
-/* Aviso de erro do formulário */
-.form_campo .form-span{
-  font-size: 12px;
-  color: #f60404;
-  background-color: #ead5d4;
-  padding: 7px;
-  visibility: hidden;
-  border-radius: 5px;
-  margin-top: -10px;
-
+  }
+ 
+  .mobile-info{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+   
+  }
 }
 
-.input_cadastro {
-  font-family: var(--font-farro);
-  color: var(--color-placeholder);
-  font-size: 16px;
-  width: 488px;
-  padding: 18px 20px;
-  margin: 8px 0;
-  margin-top: -22px;
-  outline: none;
-  box-sizing: border-box;
-  border-radius: 7px;
-  border-color: var(--color-yellow);
-  
-}
-input[type="date"] {
-  color: #7f7f7f;
-}
-.submit_cadastro {
-  font-family: var(--font-farro);
-  color: var(--color-white);
-  font-weight: 500;
-  background-color: var(--color-bnt);
-  padding: 18px 20px;
-  border: none;
-  transition: all .4s ease;
-  border-radius: 5px;
-  
 
-}
-.submit_cadastro:hover{
-  opacity: .8;
-}
+/* -----código abaixo com os parâmetros do cadastro---- */
+
 input::placeholder {
   font-family: var(--font-farro);
   color: var(--color-placeholder);
@@ -332,6 +491,108 @@ input::placeholder {
   opacity: 0.5;
 }
 
+.cadastro {
+  background-color: #643020;
+  width: 64%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+
+.desc_cadastro{
+  text-align: center;
+  font-family: var(--font-farro);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-white);
+  width: 60%;
+  line-height: 35px;
+}
+
+.form_cadastro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: var(--font-farro);
+  color: var(--color-white);
+  font-size: 18px;
+  margin-top: 50px;
+  width: 40%;
+}
+.form_campo{
+ padding: 5px;
+  
+}
+.form_campo .form-span{
+  display: block;
+  font-size: 12px;
+  color: #f60404;
+   padding: 7px; 
+  background-color: #ead5d4;
+  border-radius: 5px;
+  margin-top: 5px;
+  visibility: hidden;
+}
+.input_cadastro{
+  font-family: var(--font-farro);
+  color: var(--color-placeholder);
+  font-size: 16px;
+  width: 100%;
+  padding: 18px 12px;
+  border-radius: 7px;
+  border-color: var(--color-yellow);
+ 
+}
+input[type="date"] {
+  color: #7f7f7f;
+}
+
+.form_sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+
+.submit_cadastro {
+  font-family: var(--font-farro);
+  color: var(--color-white);
+  font-weight: 500;
+  background-color: var(--color-bnt);
+  padding: 18px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1500px){
+  .desc_cadastro{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .form_cadastro{
+    width: 70%;
+  }
+
+  .desc_cadastro{
+    font-size: 20px;
+    padding: 0 18px;
+  }
+ 
+}
+
+@media screen and (max-width: 600px){
+  .cadastro{
+    width: 90%;
+  }
+}
 
 /* -----código abaixo com os parâmetros do rodapé----- */
 .rodape {
@@ -366,11 +627,19 @@ input::placeholder {
 .copyright_rodape {
   font-size: 14px;
   font-weight: 500;
- text-align: center; 
-  padding: 20px; 
-
+text-align: center; 
+padding: 20px; 
 }
 
+@media screen and (max-width: 1300px){
+  .rodape_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+}
 /* -----código abaixo regula o scrolls das anchors tags----- */
 #about {
   scroll-margin-top: 220px;
@@ -390,36 +659,68 @@ as demais não */
   margin-top: 70px;
   z-index: -1;
 }
+
+
 .grama1_img_hero {
   position: absolute;
   left: 0; 
   bottom: 0;
-  margin-bottom: 3.288rem;   
-  z-index: -1;
+  margin-bottom: 10rem;   
+  z-index: 1;
 }
 .grama2_img_hero {
   position: absolute;
   right: 0;
- top: 70px;
- z-index: -1;
+  top: 200px;
+  z-index: 1;
 }
 .grama3_img_operation {
-  
   position: absolute;
   right: 0;
  /* top: 790px; */
- bottom: -50%;
+ bottom: -57%;
  transform: translateY(-50%);
  z-index: -1;
 }
-.star_img_operation {
+
+@media screen and (max-width: 1200px){
+  .grama1_img_hero{
+    width: 50px;
+    top: -90px;
+  }
+
+  .grama2_img_hero{
+    width: 100px;
+    margin-top: 200px;
+  }
+  .grama3_img_operation {
+    position: absolute;
+    right: 0;
+   /* top: 790px; */
+   bottom: -50%;
+   transform: translateY(-80%);
+   z-index: -1;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .grama2_img_hero{
+    margin-top: -10px;
+  }
+
+  .grama4_img{
+    display: none;
+  }
+}
+
+/* .star_img_operation {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 10%;
   margin-top: 37px;
-}
+} */
 .char {
   position: absolute;
   bottom: 0;
@@ -437,12 +738,11 @@ margin-bottom: 4px;
   
 }
 .chars_btns{
- 
   position: absolute;
   display: flex;
   align-items: center;
   gap: 32px;
-  right: 15%;
+  right: 0%;
   transform: translate(-50%,-50%);
 }
 .chars_btns button{
@@ -453,63 +753,65 @@ margin-bottom: 4px;
   cursor: pointer;
   transition: all .3s ease;
   box-shadow: 2px 2px 0px #626262;
-  
 }
 .chars_btns button:hover{
-  
+  opacity: .8;
   box-shadow: inset 2px 2px 0px #626262;
+}
 
-
+@media screen and (max-width: 1300px){
+  .chars_btns{
+    top: 70%;
+    right: 22%;
+  }
 }
 
 .grama4_img {
   width: 320px;
   position: absolute;
-  left: 7%; 
+  left: 0; 
   bottom: 0;
-  transform: translateX(-50%);
+  z-index: 5;
+  top: 175rem;
 }
 
 /* código abaixo com os parâmetros do botão de voltar para o topo */
-.scrollbutton { 
-  font-family: var(--font-farro);
-  display: none; 
-  position: fixed; 
-  bottom: 30px; 
-  right: 0.5%; 
-  background-color: #ffffff; 
-  color: #000000; 
-  padding: 15px; 
-  width: 1%;
-  border-radius: 500px; 
-  text-decoration: none; 
-  font-size: 20px;
-  transition: width 0.5s;
+.scrollbutton {
+   width: 45px;
+   height: 45px;
+   font-family: var(--font-farro);
+   background-color: var(--color-white);
+   position: fixed; 
+   right: 0.5%; 
+   bottom: 30px; 
+   padding: 5px;
+   border-radius: 50%;
+   /* font-size: 20px; */
+   transition: all .5s ease-in-out;
+  
 } 
 .scrollbutton_text {
   font-size: 15px;
 }
 .scrollbutton:hover { 
- width: 1.5%;
- transition: 0.2s ease-out;
+ width: 52px;
+ height: 52px;
 }
 .up_arrow {
-  width: 100%;
+   width: 100%;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  
   transition: 0.3s ease-out;
 
 }
-.up_arrow:hover {
-  transition: 0.3s ease-out;
-  transform: translateY(-5px)
-}
+
 .btnEntrance {
   animation-duration: 0.5s;
   animation-fill-mode: both;
   animation-name: btnEntrance;
 }
+
 /* zoomIn */
  @keyframes btnEntrance { 
   from {
@@ -558,5 +860,3 @@ margin-bottom: 4px;
     transform: translate3d(0, 100%, 0);
   }
 }
-
-

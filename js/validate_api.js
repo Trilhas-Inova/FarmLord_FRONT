@@ -12,15 +12,23 @@ form.addEventListener("submit",async (event)=>{
  // Captura os dados do formulário
   const name = campos[0].value.trim();
   const email= campos[1].value.trim();
-  const birthData= campos[2].value.trim();
-  const password=campos[3].value;
-  console.log(`name: ${name}, email: ${email}, birthData: ${birthData}, password: ${password}`);
+  const  birthDay= campos[2].value.trim();
+  const parts = birthDay.split('-');
+  const formatteDay = `${parts[2]}/${parts[1]}/${parts[0]}`;
+ const password=campos[3].value;
+ 
+
+  console.log(`name: ${name}, email: ${email}, birthData: ${birthDay}, password: ${password}`);
   
+  
+
+
+
   //== Dados do formulário
   const dados ={
     username:name,
     email:email,
-    birthday: birthData,
+    birthday: formatteDay,
     password:password
   };
 
@@ -37,7 +45,7 @@ form.addEventListener("submit",async (event)=>{
   console.log(`Senha válida: ${isPasswordValid}`);
   console.log(`Data válida: ${isDateValid}`);
 
-
+// alerta de erro no formulário
     
   if (!nameValidate() || !emailValidate() || !mainPasswordValidate() || !validateDate()) {
     alert('Por favor, corrija os erros no formulário.');
@@ -46,9 +54,9 @@ form.addEventListener("submit",async (event)=>{
 
   //===Envia os dados para a API
   
-  //http://api.farmlord.com.br/register
+  //https://api.farmlord.com.br/register
   //https://reqres.in/api/users
-
+  
 
   console.log(dados);
 try {
@@ -59,8 +67,10 @@ try {
         'Content-Type': 'application/json'
     },
     body: JSON.stringify(dados)
-
 });
+
+console.log(result)
+
 //
    
    // Verifica a resposta da API
@@ -68,8 +78,11 @@ try {
     const jsonResult = await result.json();
     console.log('Sucesso:', jsonResult);
     alert('Formulário enviado com sucesso!');
-} else {
-    console.error('Erro:', result.statusText);
+}
+
+
+else {
+    console.error('Erro:', result.status);
     alert('Erro ao enviar formulário.');
 }
 } catch (erro) {
@@ -141,25 +154,23 @@ function validateDate() {
     age--;
   }
 
-  console.log(`Idade calculada: ${age}`);
+ 
 
   if (age >= 18) {
-    console.log('Idade válida');
+   
     removeErro(2);
     return true;
   } else {
-    console.log('Menor de idade');
+   
     setErro(2);
     return false;
   }
 
 
 }
-
-
 function mainPasswordValidate() {
   const inputPassword = campos[3].value;
-  if (inputPassword.length < 6) {
+  if (inputPassword.length < 8) {
    
     setErro(3);
     return false;
@@ -169,5 +180,3 @@ function mainPasswordValidate() {
     return true;
   }
 }
-
-
